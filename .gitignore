@@ -6,4 +6,3 @@ logs
 config/server.json
 server/views/template.njk
 server/views/components
-server/public/build
