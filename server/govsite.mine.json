@@ -1,0 +1,237 @@
+{
+  "conditions": [],
+  "pages": [
+    {
+      "path": "/accessible",
+      "components": [
+        {
+          "type": "YesNoField",
+          "name": "accessible",
+          "title": "Is the property accessible?",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/date-of-subsidence"
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "components": [
+        {
+          "type": "Html",
+          "content": "<div class=\"govuk-width-container\">\r\n    <div class=\"govuk-breadcrumbs\">\r\n      <ol class=\"govuk-breadcrumbs__list\">\r\n        <li class=\"govuk-breadcrumbs__list-item\">\r\n          <a class=\"govuk-breadcrumbs__link\" href=\"#\">Home</a>\r\n        </li>\r\n        <li class=\"govuk-breadcrumbs__list-item\">\r\n          <a class=\"govuk-breadcrumbs__link\" href=\"#\">Section</a>\r\n        </li>\r\n        <li class=\"govuk-breadcrumbs__list-item\" aria-current=\"page\">Subsection</li>\r\n      </ol>\r\n    </div>\r\n  \r\n    <main class=\"govuk-main-wrapper \" id=\"main-content\" role=\"main\">\r\n      <div class=\"govuk-grid-row\">\r\n        <div class=\"govuk-grid-column-two-thirds\">\r\n          <h1 class=\"govuk-heading-xl\">Mine Support</h1>\r\n  \r\n          <p class=\"govuk-body\">Use this service to:</p>\r\n  \r\n          <ul class=\"govuk-list govuk-list--bullet\">\r\n              <li>submit claim for financial aid if your property is affected by subsidence caused by a mine shaft</li>\r\n              <li><a class=\"govuk-link\" href=\"/schedule\">check your payment schedule</a></li>\r\n            </ul>\r\n  \r\n          <p class=\"govuk-body\">Registering takes around 5 minutes.</p>\r\n  \r\n          <a href=\"/property-type\" role=\"button\" draggable=\"false\" class=\"govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8\">\r\n            Start now\r\n          </a>\r\n  \r\n          <h2 class=\"govuk-heading-m\">Before you start</h2>\r\n  \r\n          <p class=\"govuk-body\">You can also <a class=\"govuk-link\" href=\"#\">register by post</a>.</p>\r\n  \r\n          <p class=\"govuk-body\">The online service is also available in <a class=\"govuk-link\" href=\"#\">Welsh (Cymraeg)</a>.</p>\r\n  \r\n          <p class=\"govuk-body\">You cannot register for this service if you’re in the UK illegally.</p>\r\n        </div>\r\n  \r\n        <div class=\"govuk-grid-column-one-third\">\r\n  \r\n          <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->\r\n  \r\n          <aside class=\"app-related-items\" role=\"complementary\">\r\n            <h2 class=\"govuk-heading-m\" id=\"subsection-title\">\r\n              Subsection\r\n            </h2>\r\n            <nav role=\"navigation\" aria-labelledby=\"subsection-title\">\r\n              <ul class=\"govuk-list govuk-!-font-size-16\">\r\n                <li>\r\n                  <a class=\"govuk-link\" href=\"#\">\r\n                    Related link\r\n                  </a>\r\n                </li>\r\n                <li>\r\n                  <a class=\"govuk-link\" href=\"#\">\r\n                    Related link\r\n                  </a>\r\n                </li>\r\n                <li>\r\n                  <a href=\"#\" class=\"govuk-link govuk-!-font-weight-bold\">\r\n                    More <span class=\"govuk-visually-hidden\">in Subsection</span>\r\n                  </a>\r\n                </li>\r\n              </ul>\r\n            </nav>\r\n          </aside>\r\n  \r\n        </div>\r\n      </div>\r\n    </main>\r\n  </div>",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/property-type"
+        },
+        {
+          "path": "/pending"
+        },
+        {
+          "path": "/schedule"
+        }
+      ],
+      "title": "Home"
+    },
+    {
+      "path": "/property-type",
+      "components": [
+        {
+          "options": {
+            "list": "PropertyType"
+          },
+          "type": "RadiosField",
+          "name": "type",
+          "title": "What type of property is affected?",
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/accessible"
+        }
+      ]
+    },
+    {
+      "path": "/date-of-subsidence",
+      "components": [
+        {
+          "type": "DateField",
+          "name": "dateOfSubsidence",
+          "title": "When did the subsidence start?",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/type"
+        }
+      ]
+    },
+    {
+      "path": "/type",
+      "components": [
+        {
+          "options": {
+            "list": "MineType"
+          },
+          "type": "CheckboxesField",
+          "name": "type",
+          "title": "What type of mine is it?",
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/email"
+        }
+      ]
+    },
+    {
+      "path": "/confirmation",
+      "components": [
+        {
+          "type": "Html",
+          "content": "<div class=\"govuk-width-container\">\r\n  <main class=\"govuk-main-wrapper govuk-main-wrapper--l\" id=\"main-content\" role=\"main\">\r\n    <div class=\"govuk-grid-row\">\r\n      <div class=\"govuk-grid-column-two-thirds\">\r\n        <div class=\"govuk-panel govuk-panel--confirmation\">\r\n          <h1 class=\"govuk-panel__title\">\r\n            Application complete\r\n          </h1>\r\n          <div class=\"govuk-panel__body\">\r\n            Your reference number<br><strong>MINE123</strong>\r\n          </div>\r\n        </div>\r\n\r\n        <p class=\"govuk-body\">We have sent you a confirmation email.</p>\r\n\r\n        <h2 class=\"govuk-heading-m\">What happens next</h2>\r\n\r\n        <p class=\"govuk-body\">\r\n          Your application will be reviewed by an accredited Mine Surveyor before continuing for payment.\r\n        </p>\r\n        <p class=\"govuk-body\">\r\n          They will contact you either to confirm your registration, or to ask for more information.\r\n        </p>\r\n\r\n        <p class=\"govuk-body\">\r\n          <a href=\"#\" class=\"govuk-link\">What did you think of this service?</a> (takes 30 seconds)\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </main>\r\n</div>",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": [],
+      "title": "Confirmation"
+    },
+    {
+      "path": "/email",
+      "components": [
+        {
+          "type": "EmailAddressField",
+          "name": "email",
+          "title": "Please enter your email address",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/confirmation"
+        }
+      ]
+    },
+    {
+      "path": "/pending",
+      "components": [
+        {
+          "type": "Html",
+          "content": "<table class=\"govuk-table\">\r\n  <caption class=\"govuk-table__caption\">Pending applications</caption>\r\n  <thead class=\"govuk-table__head\">\r\n    <tr class=\"govuk-table__row\">\r\n      <th class=\"govuk-table__header govuk-!-width-one-half\" scope=\"col\">Reference</th>\r\n      <th class=\"govuk-table__header govuk-!-width-one-quarter\" scope=\"col\"></th>\r\n    </tr>\r\n  </thead>\r\n  <tbody class=\"govuk-table__body\">\r\n    <tr class=\"govuk-table__row\">\r\n      <td class=\"govuk-table__cell\">Mine123</td>\r\n      <td class=\"govuk-table__cell\"><a href=\"/review\">Review</a></td>\r\n    </tr>\r\n    <tr class=\"govuk-table__row\">\r\n      <td class=\"govuk-table__cell\">Mine456</td>\r\n      <td class=\"govuk-table__cell\"><a href=\"/review\">Review</a></td>\r\n    </tr>\r\n    <tr class=\"govuk-table__row\">\r\n      <td class=\"govuk-table__cell\">Mine789</td>\r\n      <td class=\"govuk-table__cell\"><a href=\"/review\">Review</a></td>\r\n    </tr>\r\n  </tbody>\r\n</table>",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/details"
+        }
+      ],
+      "title": "Pending review"
+    },
+    {
+      "path": "/details",
+      "title": "Claim details",
+      "components": [
+        {
+          "type": "Html",
+          "content": "<dl class=\"govuk-summary-list\">\r\n  <div class=\"govuk-summary-list__row\">\r\n    <dt class=\"govuk-summary-list__key\">\r\n      Email\r\n    </dt>\r\n    <dd class=\"govuk-summary-list__value\">\r\n      user@email.com\r\n    </dd>\r\n  </div>\r\n  <div class=\"govuk-summary-list__row\">\r\n    <dt class=\"govuk-summary-list__key\">\r\n      Type of property\r\n    </dt>\r\n    <dd class=\"govuk-summary-list__value\">\r\n      Business\r\n    </dd>\r\n  </div>\r\n  <div class=\"govuk-summary-list__row\">\r\n    <dt class=\"govuk-summary-list__key\">\r\n      Property accessible\r\n    </dt>\r\n    <dd class=\"govuk-summary-list__value\">\r\n      Yes\r\n    </dd>\r\n  </div>\r\n  <div class=\"govuk-summary-list__row\">\r\n    <dt class=\"govuk-summary-list__key\">\r\n      Date of subsidence\r\n    </dt>\r\n    <dd class=\"govuk-summary-list__value\">\r\n      10/05/2015\r\n    </dd>\r\n  </div>\r\n  <div class=\"govuk-summary-list__row\">\r\n      <dt class=\"govuk-summary-list__key\">\r\n        Type of mine\r\n      </dt>\r\n      <dd class=\"govuk-summary-list__value\">\r\n        Coal<br>Gold\r\n      </dd>\r\n    </div>\r\n</dl>\r\n\r\n<button type=\"submit\" class=\"govuk-button\">\r\n  Approve\r\n</button>",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/approved"
+        }
+      ]
+    },
+    {
+      "path": "/approved",
+      "title": "Approval confirmation",
+      "components": [
+        {
+          "type": "Html",
+          "content": "<div class=\"govuk-width-container\">\r\n    <main class=\"govuk-main-wrapper govuk-main-wrapper--l\" id=\"main-content\" role=\"main\">\r\n      <div class=\"govuk-grid-row\">\r\n        <div class=\"govuk-grid-column-two-thirds\">\r\n          <div class=\"govuk-panel govuk-panel--confirmation\">\r\n            <h1 class=\"govuk-panel__title\">\r\n              Application approved\r\n            </h1>\r\n            <div class=\"govuk-panel__body\">\r\n              Your reference number<br><strong>MINE123</strong>\r\n            </div>\r\n          </div>\r\n  \r\n          <p class=\"govuk-body\">We have sent you a confirmation email.</p>\r\n  \r\n          <h2 class=\"govuk-heading-m\">What happens next</h2>\r\n  \r\n          <p class=\"govuk-body\">\r\n            The claim will be processed for payment.\r\n          </p>\r\n  \r\n          <p class=\"govuk-body\">\r\n            <a href=\"#\" class=\"govuk-link\">What did you think of this service?</a> (takes 30 seconds)\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </main>\r\n  </div>",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": []
+    },
+    {
+      "path": "/schedule",
+      "title": "Payment Schedule",
+      "components": [
+        {
+          "type": "Html",
+          "content": "<table class=\"govuk-table\">\r\n    <caption class=\"govuk-table__caption\">Dates and amounts</caption>\r\n    <thead class=\"govuk-table__head\">\r\n      <tr class=\"govuk-table__row\">\r\n        <th class=\"govuk-table__header\" scope=\"col\">Date</th>\r\n        <th class=\"govuk-table__header\" scope=\"col\">Amount</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody class=\"govuk-table__body\">\r\n      <tr class=\"govuk-table__row\">\r\n        <th class=\"govuk-table__header\" scope=\"row\">1 January 2020</th>\r\n        <td class=\"govuk-table__cell\">£109.80</td>\r\n      </tr>\r\n      <tr class=\"govuk-table__row\">\r\n          <th class=\"govuk-table__header\" scope=\"row\">1 February 2020</th>\r\n          <td class=\"govuk-table__cell\">£109.80</td>\r\n      </tr>\r\n      <tr class=\"govuk-table__row\">\r\n          <th class=\"govuk-table__header\" scope=\"row\">1 March 2020</th>\r\n          <td class=\"govuk-table__cell\">£109.80</td>\r\n      </tr>\r\n      <tr class=\"govuk-table__row\">\r\n          <th class=\"govuk-table__header\" scope=\"row\">1 April 2020</th>\r\n          <td class=\"govuk-table__cell\">£109.80</td>\r\n      </tr>\r\n      <tr class=\"govuk-table__row\">\r\n          <th class=\"govuk-table__header\" scope=\"row\">1 May 2020</th>\r\n          <td class=\"govuk-table__cell\">£109.80</td>\r\n      </tr>\r\n      <tr class=\"govuk-table__row\">\r\n          <th class=\"govuk-table__header\" scope=\"row\">1 June 2020</th>\r\n          <td class=\"govuk-table__cell\">£109.80</td>\r\n      </tr>\r\n    </tbody>\r\n  </table>",
+          "options": {},
+          "schema": {}
+        }
+      ],
+      "next": []
+    }
+  ],
+  "sections": [],
+  "lists": [
+    {
+      "name": "PropertyType",
+      "title": "PropertyType",
+      "type": "string",
+      "items": [
+        {
+          "text": "Business",
+          "value": "business",
+          "description": ""
+        },
+        {
+          "text": "Home",
+          "value": "home",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MineType",
+      "title": "MineType",
+      "type": "string",
+      "items": [
+        {
+          "text": "Coal",
+          "value": "coal",
+          "description": ""
+        },
+        {
+          "text": "Iron",
+          "value": "iron",
+          "description": ""
+        },
+        {
+          "text": "Gold",
+          "value": "gold",
+          "description": ""
+        },
+        {
+          "text": "Other",
+          "value": "other",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
